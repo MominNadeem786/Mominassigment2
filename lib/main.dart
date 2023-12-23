@@ -19,8 +19,26 @@ void main() {
   // usereligibility.removeWhere((element) => element == "Eligible");
   // print(usereligibility);
   //    Q:3  Given a list of integers, write a dart code that returns the maximum value from the list.
-  List<int> numbers = [5, 2, 4, 8, 1, 3, 6, 7];
-  int maxvalue =
-      numbers.reduce((max, current) => max > current ? max : current);
-  print("maximun value :$maxvalue");
+//   List<int> numbers = [5, 2, 4, 8, 1, 3, 6, 7];
+//   int maxvalue =
+//       numbers.reduce((max, current) => max > current ? max : current);
+//   print("maximun value :$maxvalue");
+//    Q:4 Write a Dart code that takes in a list of strings and removes any duplicate elements,
+//returning a new list without duplicates.
+//The order of elements in the new list should be the same as in the original list.
+  List<String> originallist = [
+    'apple',
+    'banana',
+    'orange',
+    'mango',
+    'apple',
+    'banana',
+    'grapes',
+    'banana',
+    'pineapple',
+    'apple'
+  ];
+  List<String> uniquelist = originallist.toSet().toList();
+  print("original list: $originallist");
+  print("list without duplicates:$uniquelist");
 }
