@@ -1,4 +1,7 @@
+import 'dart:io';
+
 void main() {
+// Assignment # 02:
 // Q:1 Create a list of numbers &
 //   write a program to get the smallest &
 //  greatest number from a list.
@@ -7,7 +10,7 @@ void main() {
   // int greatest = numbers.reduce((a, b) => a > b ? a : b);
   // print("smallest number:$smallest");
   // print("greatest number:$greatest");
-//   Q:2 emove all false values from below list by using removeWhere or retainWhere property.
+//   Q:2 Remove all false values from below list by using removeWhere or retainWhere property.
   // List<String> usereligibility = [
   //   "John",
   //   "Alice",
@@ -67,12 +70,218 @@ void main() {
   //   print("updated mathmarks: $mathmarks");
   //   Q:7 Create a map with name, phone keys and store some values to it.
   //    Use where to find all keys that have length 4.
-  Map<String, String> contactMap = {
-    'Momin': '123-456-7890-333',
-    'Ali': '987-654-3210',
-    'Sanaullah': '555-666-7774',
-    'Anus': '5554'
-  };
-  var namewithlenghtfour = contactMap.keys.where((name) => name.length == 4);
-  print("names with lenght 4: $namewithlenghtfour");
+  // Map<String, String> contactMap = {
+  //   'Momin': '123-456-7890-333',
+  //   'Ali': '987-654-3210',
+  //   'Sanaullah': '555-666-7774',
+  //   'Anus': '5554'
+  // };
+  // var namewithlenghtfour = contactMap.keys.where((name) => name.length == 4);
+  // print("names with lenght 4: $namewithlenghtfour");
+  //
+  //Assignment # 03:
+  // Question #01: Write a program that prints the
+// multiplication table of a given number using a for loop.
+// Example:
+// Input: 5
+// Output:
+// 5 x 1= 5
+// 5 x 2= 10
+// 5 x 3= 15
+// .....
+// 5 x 10 = 50
+  // var table = 5;
+  // for (var i = 1; i <= 10; i++) {
+  //   print('$table * $i= ${table * i}');
+  // }
+// Question # 02:
+// List<int> numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// print("Input: $numbers");
+// print("Output: ");
+//   for (int number in numbers){
+//     if (number % 2 == 0) {
+//       print(number);
+//     }
+//   }
+// Question # 03:
+// Create a Flutter loop that prints even numbers from 2 to 10.
+//   print("Even Numbers from 2 to 10:");
+  // for (int i = 2; i <= 10; i += 2) {
+  //   print(i);
+  // }
+// Question # 04:
+// Write a program that
+// asks the user for their email and password. You are given a list of predefined
+// user credentials (email and password combinations). If the entered email and
+// password match any of the credentials in the list, print "User login successful."
+// Otherwise, keep asking for the email and password until the correct credentials
+// are provided.
+//   List<Map<String, String>> userCredentials = [
+//     {"email": "momin1@example.com", "password": "momin1"},
+//     {"email": "momin2@example.com", "password": "momin2"},
+//     {"email": "momin3@example.com", "password": "momin3"},
+//   ];
+//  // Function to check user login
+//   bool checkUserLogin(String enteredEmail, String enteredPassword) {
+//     for (var user in userCredentials) {
+//       if (user["email"] == enteredEmail &&
+//           user["password"] == enteredPassword) {
+//         return true;
+//       }
+//     }
+//     return false;
+//   }
+//  // Ask the user for email and password
+//   while (true) {
+//     stdout.write("Enter your email: ");
+//     String enteredEmail = stdin.readLineSync() ?? "";
+// stdout.write("Enter your password: ");
+//     String enteredPassword = stdin.readLineSync() ?? "";
+//  // Check user login
+//     if (checkUserLogin(enteredEmail, enteredPassword)) {
+//       print("User login successful.");
+//       break;
+//     } else {
+//       print("Invalid credentials. Please try again.\n");
+//     }
+//   }
+// Question # 05: Implement a code that checks
+// whether a given number is prime or not.
+// Ask the user to enter a number
+//   stdout.write("Enter a number: ");
+//   String input = stdin.readLineSync() ?? "";
+//   int number = int.tryParse(input) ?? 0;
+//   // Check if the entered number is prime
+//   if (isPrime(number)) {
+//     print("$number is a prime number.");
+//   } else {
+//     print("$number is not a prime number.");
+//   }
+// }
+
+// // Function to check if a number is prime
+// bool isPrime(int num) {
+//   if (num < 2) {
+//     return false;
+//   }
+//   for (int i = 2; i <= num / 2; i++) {
+//     if (num % i == 0) {
+//       return false;
+//     }
+//   }
+//   return true;
+// Assignment # 04:
+// Question # 01:Write a program that takes a list
+// of numbers as input and prints the even numbers in the list using a for loop.
+// Example:
+// Input:
+// [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+// Output:
+// 2 4 6 8 10
+// List<int> numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// print("Even numbers in the list:");
+//   for (int number in numbers) {
+//     if (number % 2 == 0) {
+//       print(number);
+//     }
+//   }
+// Question # 02:
+// Write a program that prints the
+// Fibonacci seque nce up to a given number using a for loop.
+// Example:
+// Input:
+// 10
+// Output:
+// 0 1 1 2 3 5 8
+  // int limit = 10;
+  // print("Fibonacci sequence up to $limit:");
+  // int first = 0;
+  // int second = 1;
+  // for (int i = 0; first <= limit; i++) {
+  //   print(first);
+  //   int next = first + second;
+  //   first = second;
+  //   second = next;
+  // }
+// Question # 03:
+// Implement a code that checks
+// whether a given number is prime or not.
+// Example:
+// Input:
+// 17
+// Output:
+// 17 is a prime number.
+//   int number = 17;
+//   if (isPrime(number)) {
+//     print("$number is a prime number.");
+//   } else {
+//     print("$number is not a prime number.");
+//   }
+// }
+// bool isPrime(int num) {
+//   if (num <= 1) {
+//     return false;
+//   }
+//   for (int i = 2; i <= num / 2; i++) {
+//     if (num % i == 0) {
+//       return false;
+//     }
+//   }
+//   return true;
+// Q4.Implement a code that finds the
+// largest element in a list using a for loop.
+// Example:
+// Input:
+// [3, 9, 1, 6, 4, 2, 8, 5, 7]
+// Output:
+// Largest element: 9
+//   List<int> numbers = [3, 9, 1, 6, 4, 2, 8, 5, 7];
+//   int largest = findLargest(numbers);
+//   print("Largest element: $largest");
+// }
+
+// int findLargest(List<int> list) {
+//   if (list.isEmpty) {
+//     print("List is empty.");
+//   }
+//   int largest = list[0];
+//   for (int number in list) {
+//     if (number > largest) {
+//       largest = number;
+//     }
+//   }
+//   return largest;
+// Q5. Implement a function that checks if a given string is a
+// palindrome.
+// Example:
+// Input:
+// "radar"
+// Output:
+// "radar" is a palindrome.
+//   String inputString = "radar";
+//   if (isPalindrome(inputString)) {
+//     print('"$inputString" is a palindrome.');
+//   } else {
+//     print('"$inputString" is not a palindrome.');
+//   }
+// }
+// bool isPalindrome(String str) {
+//   String reversed = str.split('').reversed.join('');
+// //   return str == reversed;
+// Q6. Write a program to make such a
+// pattern like a right angle triangle with a number which will repeat a number in
+// a row. The pattern like :
+//  1
+//  22
+//  333
+// 4444
+//   int n = 4; // Number of rows
+//  for (int i = 1; i <= n; i++) {
+//     for (int j = 1; j <= i; j++) {
+//       // Print the repeating number
+//       print("$i");
+//     }
+//     // Move to the next line after each row
+// print("");
+//   }
 }
